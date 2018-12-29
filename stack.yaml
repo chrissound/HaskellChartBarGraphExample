@@ -11,3 +11,5 @@ extra-deps:
 flags: {}
 
 extra-package-dbs: []
+nix:
+  packages: [pkgconfig, cairo, zlib, pango, xorg.xproto, xorg.libX11, gtk2, gtk3]
