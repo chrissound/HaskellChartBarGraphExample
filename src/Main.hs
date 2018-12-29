@@ -3,11 +3,12 @@ module Main where
 import Graphics.Rendering.Chart
 import Graphics.Rendering.Chart.Backend.Cairo
 import Data.Colour
+import Data.Colour.Names
 import Control.Lens
 import Data.Default.Class
 
 chart :: Bool -> Renderable ()
-chart borders = toRenderable layout
+chart borders = fillBackground (FillStyleSolid $ opaque green)  $ toRenderable layout
  where
   layout =
         layout_title .~ "Sample Bars" ++ btitle
